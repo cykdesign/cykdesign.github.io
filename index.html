@@ -3,156 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chen-Yu Kao - Product / Experience Designer Portfolio">
-    <title>Chen-Yu Kao - Product / Experience Designer</title>
+    <meta name="description" content="Chen-Yu &quot;Thomas&quot; Kao - Product / Experience Designer">
+    <title>Chen-Yu "Thomas" Kao</title>
+    <link rel="icon" type="image/svg+xml" href="Logo.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="#home" class="brand">Chen‑Yu Kao</a>
-            <div class="nav-container">
-                <a href="#works" class="nav-link">works</a>
-                <a href="#about" class="nav-link">about</a>
-                <a href="#contact" class="nav-link">contact</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="Logo.svg" alt="Chen‑Yu Kao" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Resume/Resume_CYK.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="#" id="contact-trigger">Get in touch</a></li>
+            </ul>
+            <div class="nav-right-group">
+                <div class="nav-mobile-buttons">
+                    <a href="Resume/Resume_CYK.pdf" target="_blank" rel="noopener noreferrer" class="nav-emoji-btn" aria-label="Resume">📄</a>
+                    <a href="#" id="contact-trigger-mobile" class="nav-emoji-btn" aria-label="Get in touch">💬</a>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle dark mode" id="theme-toggle">
+                    <img src="svg/light.svg" alt="Toggle theme" id="theme-icon" class="theme-icon-img">
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content split">
-            <div class="hero-copy">
-                <h1 class="hero-title">Chen‑Yu Kao</h1>
-                <p class="hero-subtitle">Product / Experience Designer</p>
-                <div class="hero-ctas">
-                    <a href="#works" class="button primary">View work</a>
-                    <a href="#about" class="button subtle">About me</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-title-wrapper">
+                    <div class="text-spacer"></div>
+                    <h1 class="hero-title"><span class="name-wrap"><span class="name-prefix">I'm </span>Chen-Yu <span class="highlight-name">"Thomas"</span> Kao</span><br><span class="title-role-wrapper"><span class="title-role" id="typing-text"></span><span class="typing-cursor">|</span></span><br><span class="location-wrap">based in <span class="city-name">Los Angeles</span> 🌴</span></h1>
+                    <div class="text-spacer"></div>
                 </div>
-            </div>
-            <div class="hero-visual" aria-hidden="true"></div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="works" class="projects">
-        <!-- Project 1: Inline Reflexives -->
-        <div class="project alt" data-project="1">
-            <div class="project-content">
-                <div class="project-text">
-                    <p class="project-description">Accelerated Ladder application process. Less is more.</p>
-                    <p class="project-type">User Experience Design</p>
-                    <h2 class="project-title">Inline Reflexives</h2>
-                    <div class="project-number">1</div>
-                </div>
-                <div class="project-visual">
-                    <div class="project-placeholder">Case study visual</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2: Misrepresentation -->
-        <div class="project" data-project="2">
-            <div class="project-content">
-                <div class="project-text">
-                    <p class="project-description">Tackled one of the most problematic issues in insurance industry: Fraud.</p>
-                    <p class="project-type">User Experience/Interface Design</p>
-                    <h2 class="project-title">Misrepresentation</h2>
-                    <div class="project-number">2</div>
-                </div>
-                <div class="project-visual">
-                    <div class="project-placeholder">Case study visual</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3: Recommendation Engine -->
-        <div class="project alt" data-project="3">
-            <div class="project-content">
-                <div class="project-text">
-                    <p class="project-description">Redesigned one of the most used tools from Cloudflare's website to help customers locate the right products and services.</p>
-                    <p class="project-type">User Experience/Interface Design</p>
-                    <h2 class="project-title">Recommendation Engine</h2>
-                    <div class="project-number">3</div>
-                </div>
-                <div class="project-visual">
-                    <div class="project-placeholder">Case study visual</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 4: Visual Merchandising -->
-        <div class="project" data-project="4">
-            <div class="project-content">
-                <div class="project-text">
-                    <p class="project-description">An attempt to multiply company's revenue and conversion through a navigation merchandising opportunity.</p>
-                    <p class="project-type">User Experience/Interface Design</p>
-                    <h2 class="project-title">Visual Merchandising</h2>
-                    <div class="project-number">4</div>
-                </div>
-                <div class="project-visual">
-                    <div class="project-placeholder">Case study visual</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 5: Template System -->
-        <div class="project alt" data-project="5">
-            <div class="project-content">
-                <div class="project-text">
-                    <p class="project-description">Revolutionized website creation experience to allow personalization in a single platform that serves two different industries.</p>
-                    <p class="project-type">Interaction Design</p>
-                    <h2 class="project-title">Template System</h2>
-                    <div class="project-number">5</div>
-                </div>
-                <div class="project-visual">
-                    <div class="project-placeholder">Case study visual</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <h2 class="section-title">About me</h2>
-            <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">Hey There!</p>
-                    <p>My Name is Chen-Yu Kao, but you can also call me Thomas. I am a designer who enjoys creating new experience, products, services and many more.</p>
-                    <p>I am currently designing new product for Ladder.</p>
-                    <p>I'd love to connect and walk through my journey with you, so feel free to reach out! I'm always on the look out for new career opportunities and ideas!</p>
+                    <div class="text-spacer"></div>
+                    <div class="text-content-wrapper">
+                        <p>I love designing delightful, growth-focused products — especially the kind that make people go "aha!" when they use them. These days, I'm shaping the next wave of life insurance experiences at <a href="https://ladderlife.com" target="_blank" rel="noopener noreferrer" class="ladder-link">Ladder</a>.</p>
+                        <p>If you're exploring new ideas or opportunities, I'm all ears — let's connect.</p>
+                    </div>
+                    <div class="text-spacer"></div>
                 </div>
-                <div class="companies-section">
-                    <h3 class="companies-title">Companies that I have helped create new experiences:</h3>
-                    <div class="companies-grid">
-                        <!-- Companies will be added here via JavaScript -->
+                <div class="about-stats">
+                    <div class="stat-spacer"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Years of experience</div>
+                        <div class="stat-note">I hope this doesn't show my age 🐤</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Projects launched</div>
+                        <div class="stat-note">It's been a journey 🚀</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="coffee-counter">0</div>
+                        <div class="stat-label">L of ☕ consumed</div>
+                        <div class="stat-note">Sheesh...that's a lot of coffee 😅</div>
+                    </div>
+                    <div class="stat-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section section-alt">
+            <div class="container">
+                <div class="portfolio-labels">
+                    <button class="portfolio-label active" data-index="0">Misrep</button>
+                    <button class="portfolio-label" data-index="1">Agent</button>
+                    <button class="portfolio-label" data-index="2">Prudential API</button>
+                </div>
+                <div class="portfolio-indicators">
+                    <div class="portfolio-indicator active" data-index="0"></div>
+                    <div class="portfolio-indicator" data-index="1"></div>
+                    <div class="portfolio-indicator" data-index="2"></div>
+                </div>
+                <div class="portfolio-wrapper">
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item active">
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">2023</span>
+                                </div>
+                                <h3>Misrepresentation</h3>
+                                <p>Reduced misrepresentation in life insurance applications by designing a unified, high‑risk disclosure framework that clarified questions, aligned underwriting and compliance, and improved data quality without adding friction.</p>
+                                <div class="portfolio-metrics">
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">12.9% ↑</div>
+                                        <div class="portfolio-metric-label">Improved answer accuracy</div>
+                                    </div>
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">10.5% ↑</div>
+                                        <div class="portfolio-metric-label">Policies issued</div>
+                                    </div>
+                                </div>
+                                <a href="project-Misrep.html" class="portfolio-case-study-link">View case study →</a>
+                            </div>
+                            <a href="project-Misrep.html" class="portfolio-image">
+                                <img src="Images/Cover/Cover-misrep.png" alt="Misrepresentation project" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                            </a>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">2024</span>
+                                </div>
+                                <h3>Agent Assisted Applications</h3>
+                                <p>Unlocked a new distribution channel by designing Ladder's first agent assisted application experience, giving agents control over high-intent flows, improving conversion quality, and establishing a scalable foundation for partner growth.</p>
+                                <div class="portfolio-metrics">
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">26.9%</div>
+                                        <div class="portfolio-metric-label">E2e conversion</div>
+                                    </div>
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">65%</div>
+                                        <div class="portfolio-metric-label">Offer rate</div>
+                                    </div>
+                                </div>
+                                <a href="project-agent.html" class="portfolio-case-study-link">View case study →</a>
+                            </div>
+                            <a href="project-agent.html" class="portfolio-image">
+                                <img src="Images/Cover/Cover-agent.png" alt="Agent project" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                            </a>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">2025</span>
+                                </div>
+                                <h3>Prudential API</h3>
+                                <p>Enabled real-time underwriting decisions by designing API driven application flows with Prudential, reducing time to offer, improving qualification rates, and creating a reusable integration model for future carrier partnerships.</p>
+                                <div class="portfolio-metrics">
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">0 → 1</div>
+                                        <div class="portfolio-metric-label">API partner integration</div>
+                                    </div>
+                                    <div class="portfolio-metric">
+                                        <div class="portfolio-metric-number">Scalable</div>
+                                        <div class="portfolio-metric-label">Multi-carrier ready</div>
+                                    </div>
+                                </div>
+                                <a href="project-pru-api.html" class="portfolio-case-study-link">View case study →</a>
+                            </div>
+                            <a href="project-pru-api.html" class="portfolio-image">
+                                <img src="Images/Cover/Cover-api.png" alt="Pru API project" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <p class="contact-text">Shoot me an email</p>
-            <a href="mailto:your-email@example.com" class="contact-email">your-email@example.com</a>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-inner">
-            <span>© <span id="year"></span> Chen‑Yu Kao</span>
-            <a href="#home" class="back-to-top">Back to top</a>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Chen‑Yu Kao. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/cykdesignworks/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <!-- End of Selection -->
+            </div>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">close</button>
+            <h3 class="section-title">Get In Touch</h3>
+            <form class="contact-form">
+                <div class="fun-fact-callout">
+                    <h4 class="fun-fact-title">✨ Fun fact about me</h4>
+                    <p class="fun-fact-text" data-fact="0">I once met Kevin Durant 🏀 randomly in a restaurant in Portland.</p>
+                    <p class="fun-fact-text" data-fact="1" style="display: none;">I am a Lego collector, yet I still haven't been to any Legolands.</p>
+                </div>
+                <div class="form-group">
+                    <label for="modal-name">Name</label>
+                    <input type="text" id="modal-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-you-are">You are</label>
+                    <select id="modal-you-are" name="you-are" required>
+                        <option value="">Select an option</option>
+                        <option value="hiring-manager">Hiring manager</option>
+                        <option value="fellow-designer">Fellow designer</option>
+                        <option value="coffee-lover">Coffee lover</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modal-subject">What's this about</label>
+                    <select id="modal-subject" name="subject" required>
+                        <option value="">Select an option</option>
+                        <option value="new-opportunity">New opportunity</option>
+                        <option value="lets-connect">Let's connect</option>
+                        <option value="coffee-recommendation">Coffee recommendation</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Message</label>
+                    <textarea id="modal-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
 </html>
-

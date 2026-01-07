@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prudential API - Chen-Yu Kao Portfolio">
+    <title>Prudential API - Chen-Yu Kao</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="Logo.svg" alt="Chen‑Yu Kao" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Resume/Resume_CYK.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="#" id="contact-trigger">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode" id="theme-toggle">
+                        <span id="theme-icon">Dark</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" style="display: none;">
+        <section class="project-page">
+            <div class="container">
+                <a href="index.html#portfolio" class="back-link">← Back to Portfolio</a>
+                <div class="project-header">
+                    <span class="project-emoji-large">🔌</span>
+                    <h1 class="project-title">Prudential API</h1>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>Enabled real-time underwriting decisions by designing API driven application flows with Prudential, reducing time to offer, improving qualification rates, and creating a reusable integration model for future carrier partnerships.</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Product Design</span>
+                        <span class="tag">API Integration</span>
+                        <span class="tag">UX/UI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Chen‑Yu Kao. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/cykdesignworks/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Password Protection Modal -->
+    <div id="password-modal" class="modal active">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal" id="password-modal-close">close</button>
+            <h2 class="section-title">What's the password?</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);">Please enter the password to continue.</p>
+            <form id="password-form" class="contact-form">
+                <div class="form-group">
+                    <label for="password-input">Password</label>
+                    <input type="password" id="password-input" name="password" required autofocus>
+                    <div id="password-error" style="color: #ef4444; font-size: 0.875rem; margin-top: 0.5rem; display: none;">Incorrect password. Please try again.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enter</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="modal-name">Name</label>
+                    <input type="text" id="modal-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Message</label>
+                    <textarea id="modal-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Password protection for Prudential API project
+        const CORRECT_PASSWORD = 'kohi';
+        const AUTH_KEY = 'prudential_api_authenticated';
+        
+        // Check if already authenticated
+        const isAuthenticated = sessionStorage.getItem(AUTH_KEY) === 'true';
+        
+        const passwordModal = document.getElementById('password-modal');
+        const passwordForm = document.getElementById('password-form');
+        const passwordInput = document.getElementById('password-input');
+        const passwordError = document.getElementById('password-error');
+        const mainContent = document.getElementById('main-content');
+        const passwordModalOverlay = passwordModal.querySelector('.modal-overlay');
+        const passwordModalClose = document.getElementById('password-modal-close');
+        
+        // Prevent password modal from closing when clicking overlay
+        if (passwordModalOverlay) {
+            passwordModalOverlay.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+        
+        // Handle close button - redirect to portfolio
+        if (passwordModalClose) {
+            passwordModalClose.addEventListener('click', () => {
+                window.location.href = 'index.html#portfolio';
+            });
+        }
+        
+        // Prevent Escape key from closing password modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && passwordModal.classList.contains('active')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, true);
+        
+        if (isAuthenticated) {
+            // Already authenticated, show content and hide modal
+            passwordModal.classList.remove('active');
+            mainContent.style.display = 'block';
+        } else {
+            // Not authenticated, show password modal
+            passwordModal.classList.add('active');
+            mainContent.style.display = 'none';
+            
+            // Handle password form submission
+            passwordForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const enteredPassword = passwordInput.value.trim();
+                
+                if (enteredPassword === CORRECT_PASSWORD) {
+                    // Correct password - authenticate and show content
+                    sessionStorage.setItem(AUTH_KEY, 'true');
+                    passwordError.style.display = 'none';
+                    passwordModal.classList.remove('active');
+                    mainContent.style.display = 'block';
+                } else {
+                    // Incorrect password - show error
+                    passwordError.style.display = 'block';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

@@ -82,3 +82,4 @@ Replace the `.project-placeholder` divs with actual images:
 
 This project is open source and available for personal use.
 
+
